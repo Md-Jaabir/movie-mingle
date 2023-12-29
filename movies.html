@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="lib/fontawesome.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movies.css">
+    <script src="data.js"></script>
+    <title>Movie Mingle</title>
+</head>
+
+<body>
+    <nav>
+        <div class="max-width">
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <div class="hamburger" >
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html" >Home</a></li>
+                <li><a href="./movies.html" class="active">Movies</a></li>
+                <li><a href="./my-movies.html">My movies</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <button class="close" ><i  class="fa-solid fa-xmark"></i></button>
+                <button class="menu-button" onclick="goTo('./index.html')">Home</button>
+                <button class="menu-button" onclick="goTo('./movies.html')">Movies</button>
+                <button class="menu-button" onclick="goTo('./my-movies.html')">My movies</button>
+                <button class="menu-button" onclick="goTo('./about.html')">About us</button>
+                <button class="menu-button" onclick="goTo('./contact.html')">Contact us</button>
+
+            </ul>
+        </div>
+
+    </nav>
+    <main class="movies-page">
+        <div class="filter-options">
+            <div class="max-width">
+                <div class="dropdowns">
+                    <div class="select" name="organization" id="org">
+                        <div class="default">All <i class="fa-solid fa-caret-down"></i></div>
+                        <div class="options">
+                            <div class="option">All</div>
+                            <div class="option">Hollywood</div>
+                            <div class="option">Bollywood</div>
+                        </div>
+
+                    </div>
+                    <div class="select" name="category" id="category">
+                        <div class="default">All <i class="fa-solid fa-caret-down"></i></div>
+                        <div class="options">
+                            <div class="option">All</div>
+                            <div class="option">Action</div>
+                            <div class="option">Comedy</div>
+                            <div class="option">Thriller</div>
+                            <div class="option">Horror</div>
+                            <div class="option">Action Thriller</div>
+                        </div>
+                    </div>
+                    <div class="select" name="release-date" id="release-date">
+                        <div class="default">All <i class="fa-solid fa-caret-down"></i></div>
+                        <div class="options">
+                            <div class="option">All</div>
+                            <div class="option">Recent</div>
+                            <div class="option">Last month</div>
+                            <div class="option">Last year</div>
+                            <div class="option">Old</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="search" placeholder="Search...">
+                    <button><img src="assets/icons/filter-solid.svg" alt="filter-icon"> <span>Filter</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="movies">
+            <div class="max-width">
+                
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+<script src="movies.js"></script>
+</html>

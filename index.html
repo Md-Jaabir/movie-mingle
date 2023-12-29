@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="lib/fontawesome.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Movie Mingle</title>
+</head>
+
+<body>
+    <nav>
+        <div class="max-width">
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <div class="hamburger" >
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./movies.html">Movies</a></li>
+                <li><a href="./my-movies.html">My movies</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <button class="close" ><i  class="fa-solid fa-xmark"></i></button>
+                <button class="menu-button" onclick="goTo('./index.html')">Home</button>
+                <button class="menu-button" onclick="goTo('./movies.html')">Movies</button>
+                <button class="menu-button" onclick="goTo('./my-movies.html')">My movies</button>
+                <button class="menu-button" onclick="goTo('./about.html')">About us</button>
+                <button class="menu-button" onclick="goTo('./contact.html')">Contact us</button>
+
+            </ul>
+        </div>
+
+    </nav>
+    <main>
+        <div class="hero">
+            <div class="max-width">
+                <h2>Get Ready...</h2>
+                <h1>Discover, Discuss, and Dive into the World of Cinema with Movie Mingle</h1>
+                <!-- <p>Welcome to Movie Mingle, where cinematic passions converge! Immerse yourself in a community of film
+                    enthusiasts, where every frame tells a story and every opinion matters. Whether you're a seasoned
+                    cinephile or just starting your cinematic journey, Movie Mingle is your hub for discovery and
+                    discussion. Join us in exploring the magic of movies, sharing insights, and connecting with fellow
+                    fans.
+                    Let's turn the spotlight on the world of cinema together.</p> -->
+                <button>Discover now!!!</button>
+            </div>
+        </div>
+        <div class="movies">
+            <div class="max-width">
+                <section class="coming-soon">
+                    <div class="header">
+                        <h2>Coming soon...</h2> <a href="">See all</a>
+                    </div>
+                    <div class="movie-list">
+                        <div class="movie">
+                            <img src="assets/posters/kgf.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">KGF 3</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/kgf2.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">KGF2</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/jawan.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">Jawan</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/rrr.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">RRR</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="trendings">
+                    <div class="header">
+                        <h2>Trending...</h2> <a href="">See all</a>
+                    </div>
+                    <div class="movie-list">
+                        <div class="movie">
+                            <img src="assets/posters/kgf.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">KGF 3</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/kgf2.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">KGF2</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/jawan.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">Jawan</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/rrr.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">RRR</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="most-liked">
+                    <div class="header">
+                        <h2>Most Liked...</h2> <a href="">See all</a>
+                    </div>
+                    <div class="movie-list">
+                        <div class="movie">
+                            <img src="assets/posters/kgf.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">KGF 3</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/kgf2.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">KGF2</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/jawan.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">Jawan</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                        <div class="movie">
+                            <img src="assets/posters/rrr.png" alt="poster" class="poster">
+                            <div class="description">
+                                <p class="title">RRR</p>
+                                <p class="category">Action</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

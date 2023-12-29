@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="lib/fontawesome.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movie.css">
+    <script src="data.js"></script>
+    <title>Movie Mingle</title>
+</head>
+
+<body>
+    <nav>
+        <div class="max-width">
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo">
+            </div>
+            <div class="hamburger" >
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./movies.html">Movies</a></li>
+                <li><a href="./my-movies.html">My movies</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <button class="close" ><i  class="fa-solid fa-xmark"></i></button>
+                <button class="menu-button" onclick="goTo('./index.html')">Home</button>
+                <button class="menu-button" onclick="goTo('./movies.html')">Movies</button>
+                <button class="menu-button" onclick="goTo('./my-movies.html')">My movies</button>
+                <button class="menu-button" onclick="goTo('./about.html')">About us</button>
+                <button class="menu-button" onclick="goTo('./contact.html')">Contact us</button>
+
+            </ul>
+        </div>
+
+    </nav>
+    <main class="movie-page">
+        <div class="max-width">
+            <div class="video">
+                <div class="controls">
+                    <div class="middle">
+                        <div class="backward">
+                            <i class="fa-solid fa-backward"></i>
+                        </div>
+                        <div class="play-button">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                        <div class="forward">
+                            <i class="fa-solid fa-forward"></i>
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="texts">
+                            <div class="current-time">00:00:00</div>
+                            <div class="total-time">00:00:00</div>
+                        </div>
+
+                        <div class="slider">
+                            <input value="0" type="range">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="sound">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <input value="0" type="range" name="volume" id="volume">
+                        </div>
+                        <!-- <div class="fullscreen">
+                            <i class="fa-solid fa-expand"></i>
+                        </div> -->
+                    </div>
+                </div>
+                <video autoplay src="">
+                </video>
+            </div>
+            <div class="buttons">
+                <button><i class="fa-solid fa-share"></i><span>Share</span></button>
+                <button><i class="fa-regular fa-heart"></i><span>Mark as favourite</span></button>
+                <button><i class="fa-solid fa-plus"></i><span>Add to wishlist</span></button>
+                <button onclick="openFullscreen()"><i class="fa-solid fa-expand"></i><span>Open Fullscreen</span></button>
+                <button class="special"><i class="fa-solid fa-download"></i><span>Download</span></button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="videocontrol.js"></script>
+    <script src="movie.js"></script>
+</body>
+
+</html>

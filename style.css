@@ -1,0 +1,293 @@
+:root{
+    --white:#bfc1b9;
+    --orange:#ee3720;
+    --gray: #262724;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body{
+    background: black;
+    color: var(--white);
+    height: fit-content;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.max-width{
+    width: 85%;
+    margin: auto;
+}
+
+nav{
+    padding: 15px 0;
+}
+
+nav .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .hamburger, nav .mobile-menu{
+    display: none;
+}
+
+nav .logo img{
+    width: 220px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+}
+
+ul li a{
+    color:var(--white);
+    text-decoration: none;
+    transition: .1s linear;
+    font-weight: 500;
+}
+
+ul li a:hover{
+    color: var(--orange);
+}
+
+ul li a.active{
+    color: var(--orange);
+}
+
+.hero{
+    background-image: url(assets/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 555px;
+}
+
+.hero .max-width{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero h2{
+    color: var(--orange);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+}
+
+.hero h1{
+    width: 50%;
+    font-size: 39px;
+    line-height: 53px;
+    color: white;
+}
+
+.hero button{
+    padding: 18px 0;
+    width: 160px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background: var(--orange);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.movies{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 60px;
+}
+
+.movies .movie-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.movie{
+    cursor: pointer;
+    padding: 20px;
+    transition:.2s linear;
+}
+
+.movie:hover{
+    background-color:var(--gray);
+}
+
+.movie img{
+    height: 315px;
+    width: 235px;
+}
+
+
+section .header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+section .header h2{
+    color: white;
+    font-size: 22px;
+}
+
+section .header a{
+    color:var(--white);
+    text-decoration: none;
+}
+
+section .header a:hover{
+    color: var(--orange);
+}
+
+.movie .description{
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.movie .description .title{
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.description .category{
+    font-size: 12px;
+    color: var(--white);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+  background:black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:var(--gray);
+    height: 40px;
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gray);
+  }
+
+  @media screen and (max-width:1180px) {
+    .movies .movie-list{
+        gap: 40px;
+        overflow-x: scroll;
+    }
+  }
+
+  @media screen and (max-width:1000px) {
+    nav .hamburger{
+        display: block;
+    }
+
+    nav .hamburger i{
+        color: var(--white);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    nav .links{
+        display: none;
+    }
+
+    nav .mobile-menu{
+        padding-top:100px;
+        display: none;
+        width: 320px;
+        background-color: black;
+        height: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        gap: 0;
+        opacity: 0;
+        transition: .3s linear;
+    }
+
+    nav .mobile-menu.active{
+        opacity: 1;
+    }
+
+    .mobile-menu button{
+        width: 100%;
+        padding: 20px 0;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .mobile-menu .close{
+        position: absolute;
+        top: 40px;
+        left: -100px;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 30px;
+        color: var(--white);
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    .hero h1{
+        width: 80%;
+    }
+
+    .hero{
+        background-image: url(./assets/ipad-hero.png);
+    }
+
+    .hero .max-width{
+        gap: 25px;
+    }
+  }
+
+  @media screen and (max-width:550px){
+    .hero h1{
+        width: 100%;
+        font-size: 35px;
+    }
+  }
+  
+  @media screen and (max-width:500px){
+    .hero{
+        background-image: url(./assets/mobile-hero.png);
+    }
+  }
+
+  @media screen and (max-width:400px){
+    .hero h1{
+        font-size: 30px;
+    }
+  }
