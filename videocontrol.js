@@ -9,8 +9,11 @@ let soundSlider = document.querySelector(".sound input");
 let controls = document.querySelector(".controls");
 let isChanging = false;
 
-video.onload = () => {
+window.onload = () => {
     setTotalTime();
+    let parameters=getParams();
+    let targetMovie=movies[parameters.index];
+    video.src=targetMovie.url;
     slider.onchange = setVideoTime;
     setInterval(() => {
         if (!isChanging) {
@@ -27,17 +30,10 @@ video.onload = () => {
     }
     controls.onclick = (event) => {
         if (event.target.classList.contains("controls")) {
-            console.log(controls.style.opacity);
-            // if(controls.style.opacity == 0){
-            //     controls.style.display="block";
-            //     controls.style.opacity=1;
-                
-            // }else{
-                controls.style.opacity=0;
-                setTimeout(()=>{
-                    controls.style.display="none";
-                },100);
-            // }
+            controls.style.opacity=0;
+            setTimeout(()=>{
+                controls.style.display="none";
+            },100);
         }
     }
 
@@ -63,6 +59,10 @@ video.onload = () => {
     slider.onblur = () => {
         isChanging = false;
     }
+}
+
+video.onload=()=>{
+    console.log("video loaded");
 }
 
 function toggleVideo() {
